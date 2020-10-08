@@ -8,6 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Author extends Model
 {
+    use HasFactory;
+
     protected $guarded = [];
 
     protected $dates = ['dob'];
@@ -17,4 +19,6 @@ class Author extends Model
         $this->attributes['dob'] = Carbon::parse(strtotime($dob));
 
     }
+
+
 }
